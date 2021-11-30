@@ -10,11 +10,12 @@ class RegistroPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.white,
         leading: Builder(
           builder: (BuildContext context) {
             return IconButton(
               icon: const Icon(Icons.menu),
+              color: Colors.black,
               onPressed: () => print('menu'),
             );
           },
@@ -22,10 +23,12 @@ class RegistroPage extends StatelessWidget {
         actions: [
           IconButton(
             icon: Icon(Icons.search),
+            color: Colors.black,
             onPressed: () {},
           ),
           IconButton(
             icon: Icon(Icons.local_grocery_store_rounded),
+            color: Colors.black,
             onPressed: () {},
           ),
         ],
@@ -116,23 +119,17 @@ class __FormState extends State<_Form> {
           ),
           SizedBox(height: 8),
           Text('______________________ Ó ______________________'),
-          SizedBox(height: 20),
           Customlabel(
+            texto1: '',
             texto: 'Registrate con Google',
-            color: Color.fromRGBO(146, 184, 31, 1),
+            color: Colors.black,
             route: 'register',
           ),
-          SizedBox(height: 20),
-          Customlabel(
-            texto: 'He leído y acepto la politica de privacidad',
-            color: Color.fromRGBO(146, 184, 31, 1),
-            route: 'register',
-          ),
-          SizedBox(height: 20),
+          SizedBox(height: 8),
           CustomButton(
               texto: 'Registrarme',
               onPressed: () {
-                // Navigator.pushReplacementNamed(context, 'register');
+                Navigator.pushReplacementNamed(context, 'principal');
               }),
         ],
       ),

@@ -15,7 +15,7 @@ class CustomButton extends StatelessWidget {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           elevation: 2,
-          primary: Color.fromRGBO(255, 150, 23, 1),
+          primary: Colors.orange[400],
           // shape: StadiumBorder(),
         ),
         onPressed: onPressed,

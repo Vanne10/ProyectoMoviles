@@ -11,11 +11,12 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.white,
         leading: Builder(
           builder: (BuildContext context) {
             return IconButton(
               icon: const Icon(Icons.menu),
+              color: Colors.black,
               onPressed: () => print('menu'),
             );
           },
@@ -23,10 +24,12 @@ class LoginPage extends StatelessWidget {
         actions: [
           IconButton(
             icon: Icon(Icons.search),
+            color: Colors.black,
             onPressed: () {},
           ),
           IconButton(
             icon: Icon(Icons.local_grocery_store_rounded),
+            color: Colors.black,
             onPressed: () {},
           ),
         ],
@@ -96,8 +99,9 @@ class __FormState extends State<_Form> {
           ),
           SizedBox(height: 8),
           Customlabel(
-            texto: '¿Has olvidado tu contraseña?',
-            color: Color.fromRGBO(146, 184, 31, 1),
+            texto1: '¿Has olvidado tu contraseña?',
+            texto: 'Recupérala',
+            color: Colors.black,
             route: 'register',
           ),
           SizedBox(height: 30),
@@ -107,13 +111,13 @@ class __FormState extends State<_Form> {
               onPressed: () {
                 // print(emailCtrl.text);
                 // print(passCtrl.text);
-                // Navigator.pushReplacementNamed(context, 'usuarios');
+                Navigator.pushReplacementNamed(context, 'principal');
               }),
           SizedBox(height: 30),
           Text(
             '¿Eres nuevo?, ¡Registrate!',
             style: TextStyle(
-                color: Colors.black, fontSize: 14, fontWeight: FontWeight.bold),
+                color: Colors.black, fontSize: 16, fontWeight: FontWeight.bold),
           ),
           SizedBox(height: 20),
           CustomButton(
